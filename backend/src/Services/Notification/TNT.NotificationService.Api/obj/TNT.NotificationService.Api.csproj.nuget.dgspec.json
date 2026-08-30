@@ -52,7 +52,7 @@
             },
             "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[9.0.0, )"
             },
             "Serilog.Sinks.Console": {
               "target": "Package",
@@ -60,7 +60,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.9.0, )"
+              "version": "[7.3.1, )"
             }
           },
           "imports": [

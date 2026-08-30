@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c54a64f3de9d2774b171bf75c50f1893679b47d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a9bef8f19b5d75fea5770b6fa07ea095514d9e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
