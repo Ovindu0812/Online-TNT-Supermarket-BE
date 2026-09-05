@@ -18,7 +18,7 @@ namespace TNT.IdentityService.Tests;
 public class IdentityWebApplicationFactory : WebApplicationFactory<Program>
 {
     // Shared known test secret — same key used in both JWT generation and validation
-    public const string TestJwtSecretKey = "test-secret-key-for-identity-tests-at-least-32-chars!";
+    public const string TestJwtSecretKey = "test-secret-key-for-unit-tests-32chars!";
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {

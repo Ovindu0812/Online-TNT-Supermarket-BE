@@ -52,22 +52,24 @@ try
     // ──────────────────────────────────────────────────────────────────────────
     // JWT Authentication
     // ──────────────────────────────────────────────────────────────────────────
-    var jwtSettings = builder.Configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>()
-        ?? throw new InvalidOperationException("Jwt configuration section is missing.");
-
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(opts =>
+        .AddJwtBearer();
+
+    builder.Services.AddOptions<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme)
+        .Configure<Microsoft.Extensions.Options.IOptions<JwtSettings>>((opts, jwtOptions) =>
         {
+            opts.IncludeErrorDetails = true;
+            var settings = jwtOptions.Value;
             opts.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = jwtSettings.Issuer,
-                ValidAudience = jwtSettings.Audience,
+                ValidIssuer = settings.Issuer,
+                ValidAudience = settings.Audience,
                 IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
+                    Encoding.UTF8.GetBytes(settings.SecretKey)),
                 ClockSkew = TimeSpan.Zero
             };
         });
@@ -208,7 +210,7 @@ try
 
     app.Run();
 }
-catch (Exception ex)
+catch (Exception ex) when (ex is not HostAbortedException)
 {
     Log.Fatal(ex, "TNT.IdentityService.Api failed to start");
     throw;

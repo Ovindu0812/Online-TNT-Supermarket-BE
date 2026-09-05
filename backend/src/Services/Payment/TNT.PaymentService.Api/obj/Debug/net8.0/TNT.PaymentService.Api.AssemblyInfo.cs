@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.PaymentService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c54a64f3de9d2774b171bf75c50f1893679b47d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23a4fb4d84b739ac7d5890fcc5e3da187dcf127e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.PaymentService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.PaymentService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
