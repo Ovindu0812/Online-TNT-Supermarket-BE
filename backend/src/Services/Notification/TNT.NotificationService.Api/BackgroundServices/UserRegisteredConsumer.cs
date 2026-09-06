@@ -34,6 +34,9 @@ public class UserRegisteredConsumer : BackgroundService
             return;
         }
 
+        // Let the host finish starting before entering the synchronous Kafka poll loop.
+        await Task.Yield();
+
         _logger.LogInformation(
             "Starting UserRegisteredConsumer. Topic={Topic}, Group={Group}, Brokers={Brokers}",
             _settings.UserEventsTopic, _settings.ConsumerGroup, _settings.BootstrapServers);

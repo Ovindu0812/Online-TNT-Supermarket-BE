@@ -212,6 +212,9 @@ services:
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       KAFKA_NUM_PARTITIONS: 1
       KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_LOG_DIRS: /var/lib/kafka/data
       CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
     volumes:
@@ -228,8 +231,8 @@ services:
   # ─── Identity Service — Port 5001 ────────────────────────────────────────────
   identity-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Identity
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Identity
     container_name: tnt-identity-service
     restart: unless-stopped
     ports:
@@ -258,8 +261,8 @@ services:
   # ─── User Service — Port 5002 ─────────────────────────────────────────────────
   user-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.User
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.User
     container_name: tnt-user-service
     restart: unless-stopped
     ports:
@@ -280,8 +283,8 @@ services:
   # ─── Product Service — Port 5003 ─────────────────────────────────────────────
   product-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Product
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Product
     container_name: tnt-product-service
     restart: unless-stopped
     ports:
@@ -307,8 +310,8 @@ services:
   # ─── Order Service — Port 5004 ───────────────────────────────────────────────
   order-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Order
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Order
     container_name: tnt-order-service
     restart: unless-stopped
     ports:
@@ -334,8 +337,8 @@ services:
   # ─── Cart Service — Port 5005 ────────────────────────────────────────────────
   cart-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Cart
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Cart
     container_name: tnt-cart-service
     restart: unless-stopped
     ports:
@@ -356,8 +359,8 @@ services:
   # ─── Payment Service — Port 5006 ─────────────────────────────────────────────
   payment-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Payment
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Payment
     container_name: tnt-payment-service
     restart: unless-stopped
     ports:
@@ -383,8 +386,8 @@ services:
   # ─── Inventory Service — Port 5007 ───────────────────────────────────────────
   inventory-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Inventory
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Inventory
     container_name: tnt-inventory-service
     restart: unless-stopped
     ports:
@@ -410,8 +413,8 @@ services:
   # ─── Notification Service — Port 5008 ───────────────────────────────────────
   notification-service:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Notification
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Notification
     container_name: tnt-notification-service
     restart: unless-stopped
     ports:
@@ -431,12 +434,12 @@ services:
   # ─── API Gateway — Port 5000 ──────────────────────────────────────────────────
   api-gateway:
     build:
-      context: ..
-      dockerfile: infrastructure/Dockerfiles/Dockerfile.Gateway
+      context: ../..
+      dockerfile: backend/infrastructure/Dockerfiles/Dockerfile.Gateway
     container_name: tnt-api-gateway
     restart: unless-stopped
     ports:
-      - "5000:8080"
+      - "${API_GATEWAY_PORT:-5000}:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ReverseProxy__Clusters__identity-cluster__Destinations__identity-destination__Address: http://identity-service:8080
