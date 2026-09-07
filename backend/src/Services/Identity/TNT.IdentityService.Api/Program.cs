@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Security.Claims;
 using System.Text;
 using TNT.IdentityService.Api.Data;
 using TNT.IdentityService.Api.DTOs;
@@ -70,6 +71,8 @@ try
                 ValidAudience = settings.Audience,
                 IssuerSigningKey = new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(settings.SecretKey)),
+                NameClaimType = ClaimTypes.NameIdentifier,
+                RoleClaimType = ClaimTypes.Role,
                 ClockSkew = TimeSpan.Zero
             };
         });
@@ -164,11 +167,17 @@ try
     builder.Services.AddCors(opts =>
     {
         opts.AddPolicy("AllowFrontend", policy =>
+        {
+            var allowedOrigins = builder.Configuration.GetValue<string>("Cors:AllowedOrigin") ?? "http://localhost:5173";
+            var origins = allowedOrigins.Split(",", StringSplitOptions.RemoveEmptyEntries)
+                .Select(o => o.Trim())
+                .ToArray();
             policy
-                .WithOrigins(
-                    builder.Configuration.GetValue<string>("Cors:AllowedOrigin") ?? "http://localhost:5173")
+                .WithOrigins(origins)
                 .AllowAnyHeader()
-                .AllowAnyMethod());
+                .AllowAnyMethod()
+                .AllowCredentials();
+        });
     });
 
     // ──────────────────────────────────────────────────────────────────────────

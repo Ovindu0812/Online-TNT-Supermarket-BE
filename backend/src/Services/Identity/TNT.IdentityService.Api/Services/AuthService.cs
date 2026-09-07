@@ -54,7 +54,7 @@ public class AuthService : IAuthService
         }
 
         // Public registration → always Buyer
-        // Admin/Seller roles are assigned via protected admin workflow only
+        // Privileged roles are assigned via a protected administrative workflow only.
         var user = new ApplicationUser
         {
             FullName = request.FullName.Trim(),
@@ -245,5 +245,4 @@ public class AuthService : IAuthService
             Role = user.Role
         };
 }
-
 

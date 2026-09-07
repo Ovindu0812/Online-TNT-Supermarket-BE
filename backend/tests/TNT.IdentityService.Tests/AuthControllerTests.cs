@@ -2,8 +2,12 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 using System.Net.Http.Json;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text.Json;
+using TNT.IdentityService.Api.Data;
 using TNT.IdentityService.Api.DTOs;
+using TNT.IdentityService.Api.Entities;
 using TNT.IdentityService.Api.Interfaces;
 
 namespace TNT.IdentityService.Tests;
@@ -168,6 +172,19 @@ public class AuthControllerTests : IClassFixture<IdentityWebApplicationFactory>
         body.User.Role.Should().Be("Buyer");
     }
 
+    [Fact(DisplayName = "Login_JwtContainsStoredRoleClaim")]
+    public async Task Login_JwtContainsStoredRoleClaim()
+    {
+        var accessToken = await GetAccessTokenForRoleAsync("Staff");
+
+        var jwt = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
+
+        jwt.Claims.Should().ContainSingle(
+            claim => (claim.Type == "role" || claim.Type == ClaimTypes.Role)
+                     && claim.Value == "Staff",
+            because: "the existing ApplicationUsers.Role value must be emitted as the JWT role claim");
+    }
+
     [Fact(DisplayName = "Login_WithInvalidCredentials_ReturnsUnauthorized")]
     public async Task Login_WithInvalidCredentials_ReturnsUnauthorized()
     {
@@ -243,6 +260,31 @@ public class AuthControllerTests : IClassFixture<IdentityWebApplicationFactory>
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         _client.DefaultRequestHeaders.Authorization = null;
+    }
+
+    [Fact(DisplayName = "RoleEndpoint_WithoutJwt_ReturnsUnauthorized")]
+    public async Task RoleEndpoint_WithoutJwt_ReturnsUnauthorized()
+    {
+        var response = await _client.GetAsync("/api/test/buyer");
+
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
+    }
+
+    [Theory(DisplayName = "RoleEndpoint_WithRequiredStoredRole_ReturnsOk")]
+    [InlineData("Admin", "/api/test/admin")]
+    [InlineData("Staff", "/api/test/staff")]
+    [InlineData("Manager", "/api/test/staff")]
+    [InlineData("Rider", "/api/test/rider")]
+    public async Task RoleEndpoint_WithRequiredStoredRole_ReturnsOk(string role, string endpoint)
+    {
+        var accessToken = await GetAccessTokenForRoleAsync(role);
+        using var request = new HttpRequestMessage(HttpMethod.Get, endpoint);
+        request.Headers.Authorization =
+            new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+        var response = await _client.SendAsync(request);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 
     // ──────────────────────────────────────────────────────────────────────────
@@ -347,6 +389,33 @@ public class AuthControllerTests : IClassFixture<IdentityWebApplicationFactory>
         var loginResp = await _client.PostAsJsonAsync("/api/auth/login",
             new LoginRequest { Email = reg.Email, Password = reg.Password });
         var body = await loginResp.Content.ReadFromJsonAsync<AuthResponse>(JsonOpts);
+        return body!.AccessToken;
+    }
+
+    private async Task<string> GetAccessTokenForRoleAsync(string role)
+    {
+        var email = $"{role.ToLowerInvariant()}_{Guid.NewGuid():N}@example.com";
+        const string password = "TestPass1!";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<IdentityDbContext>();
+            db.ApplicationUsers.Add(new ApplicationUser
+            {
+                FullName = $"Test {role}",
+                Email = email,
+                NormalizedEmail = email.ToUpperInvariant(),
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(password, workFactor: 4),
+                Role = role,
+                IsActive = true
+            });
+            await db.SaveChangesAsync();
+        }
+
+        var loginResponse = await _client.PostAsJsonAsync("/api/auth/login",
+            new LoginRequest { Email = email, Password = password });
+        loginResponse.EnsureSuccessStatusCode();
+        var body = await loginResponse.Content.ReadFromJsonAsync<AuthResponse>(JsonOpts);
         return body!.AccessToken;
     }
 }

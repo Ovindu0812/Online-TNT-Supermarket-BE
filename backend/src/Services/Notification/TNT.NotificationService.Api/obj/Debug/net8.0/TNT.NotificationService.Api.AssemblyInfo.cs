@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.NotificationService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4950040dcad49bc3088c8595687a5cf72babb643")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79620b52ceda30485ef5a85e17399360257e90fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.NotificationService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.NotificationService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

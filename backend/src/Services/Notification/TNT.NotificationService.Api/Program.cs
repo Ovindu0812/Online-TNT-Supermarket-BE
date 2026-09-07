@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Security.Claims;
+using System.Text;
 using TNT.NotificationService.Api.BackgroundServices;
 using TNT.NotificationService.Api.Kafka;
 
@@ -12,6 +16,25 @@ try
         cfg.ReadFrom.Configuration(ctx.Configuration)
            .Enrich.FromLogContext()
            .WriteTo.Console());
+
+    var jwtSection = builder.Configuration.GetRequiredSection("Jwt");
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSection["Issuer"],
+            ValidAudience = jwtSection["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(jwtSection["SecretKey"]
+                    ?? throw new InvalidOperationException("Jwt:SecretKey is required."))),
+            NameClaimType = ClaimTypes.NameIdentifier,
+            RoleClaimType = ClaimTypes.Role,
+            ClockSkew = TimeSpan.Zero
+        });
+    builder.Services.AddAuthorization();
 
     builder.Services.Configure<KafkaConsumerSettings>(
         builder.Configuration.GetSection(KafkaConsumerSettings.SectionName));
@@ -29,6 +52,8 @@ try
     app.UseSwagger();
     app.UseSwaggerUI();
     app.UseSerilogRequestLogging();
+    app.UseAuthentication();
+    app.UseAuthorization();
     app.MapControllers();
     app.MapHealthChecks("/health");
 
