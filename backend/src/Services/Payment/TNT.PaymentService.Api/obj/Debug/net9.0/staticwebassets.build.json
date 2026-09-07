@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AviyLDLNr8fP1wdQ6VPJWmDra0U3OcOiT5e+mS2F0ag=",
+  "Source": "TNT.PaymentService.Api",
+  "BasePath": "_content/TNT.PaymentService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

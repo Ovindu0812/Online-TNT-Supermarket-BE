@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ehT8It5TqVkChrIQYntFTIK+ap0Dp3tdwdDXV1ON3vM=",
+  "Source": "TNT.InventoryService.Api",
+  "BasePath": "_content/TNT.InventoryService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

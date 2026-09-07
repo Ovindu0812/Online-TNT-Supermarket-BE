@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tMSs98ncAsB0uYD1pFzPdQj28zKBqbembmj6SYWAZUI=",
+  "Source": "TNT.ReportingService.Api",
+  "BasePath": "_content/TNT.ReportingService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

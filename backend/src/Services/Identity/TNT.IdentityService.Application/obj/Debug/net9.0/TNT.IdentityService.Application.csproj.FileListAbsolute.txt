@@ -1,0 +1,16 @@
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/bin/Debug/net9.0/TNT.IdentityService.Application.deps.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/bin/Debug/net9.0/TNT.IdentityService.Application.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/bin/Debug/net9.0/TNT.IdentityService.Application.pdb
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.AssemblyInfoInputs.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.AssemblyInfo.cs
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.csproj.CoreCompileInputs.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.sourcelink.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/refint/TNT.IdentityService.Application.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.pdb
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/ref/TNT.IdentityService.Application.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/bin/Debug/net9.0/TNT.IdentityService.Domain.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/bin/Debug/net9.0/TNT.IdentityService.Domain.pdb
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.IdentityService.Application.csproj.AssemblyReference.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Identity/TNT.IdentityService.Application/obj/Debug/net9.0/TNT.Iden.A227F3F0.Up2Date

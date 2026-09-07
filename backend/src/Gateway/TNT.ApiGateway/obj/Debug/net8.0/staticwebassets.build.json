@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RYZkAuAcKaZ8OJBumqQ3HI+DRPlrki43VF3qjvFK9+Y=",
+  "Source": "TNT.ApiGateway",
+  "BasePath": "_content/TNT.ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
