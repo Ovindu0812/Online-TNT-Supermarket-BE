@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net8.0": {
       "Confluent.Kafka/2.6.1": {
@@ -1723,19 +1723,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "/Users/ovindujayaweera/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Services\\Notification\\TNT.NotificationService.Api\\TNT.NotificationService.Api.csproj",
+      "projectUniqueName": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Notification/TNT.NotificationService.Api/TNT.NotificationService.Api.csproj",
       "projectName": "TNT.NotificationService.Api",
-      "projectPath": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Services\\Notification\\TNT.NotificationService.Api\\TNT.NotificationService.Api.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Services\\Notification\\TNT.NotificationService.Api\\obj\\",
+      "projectPath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Notification/TNT.NotificationService.Api/TNT.NotificationService.Api.csproj",
+      "packagesPath": "/Users/ovindujayaweera/.nuget/packages/",
+      "outputPath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Notification/TNT.NotificationService.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/ovindujayaweera/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1745,7 +1745,6 @@
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -1754,17 +1753,10 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.400"
+      }
     },
     "frameworks": {
       "net8.0": {
-        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Confluent.Kafka": {
@@ -1803,7 +1795,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.130/libexec/sdk/8.0.130/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

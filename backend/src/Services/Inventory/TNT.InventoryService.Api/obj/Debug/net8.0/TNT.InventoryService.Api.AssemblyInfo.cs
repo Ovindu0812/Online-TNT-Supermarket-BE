@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.InventoryService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23a4fb4d84b739ac7d5890fcc5e3da187dcf127e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4950040dcad49bc3088c8595687a5cf72babb643")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.InventoryService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.InventoryService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

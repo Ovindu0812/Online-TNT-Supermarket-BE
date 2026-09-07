@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"xyg3Bsr1BiLvUoyYgd1WSACoL02gGmKaS5ptV0SYbrw=","Source":"TNT.NotificationService.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "hInKEy3js69tRqwCy0e5B6l8AfNQfPfbUWyJaVf9HNw=",
+  "Source": "TNT.NotificationService.Api",
+  "BasePath": "_content/TNT.NotificationService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

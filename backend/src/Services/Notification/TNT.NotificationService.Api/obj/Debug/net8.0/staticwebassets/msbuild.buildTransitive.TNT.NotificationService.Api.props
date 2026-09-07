@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/TNT.NotificationService.Api.props" />
+</Project>

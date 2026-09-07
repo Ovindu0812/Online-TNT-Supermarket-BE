@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e56b8f44129e8d542a111dd79bbbe40ca8e231b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4950040dcad49bc3088c8595687a5cf72babb643")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

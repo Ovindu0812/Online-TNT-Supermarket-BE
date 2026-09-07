@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"OcEPWyw82WggfuD5aHACMdX5szHh4FOnq/0o52L0jR8=","Source":"TNT.CartService.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "kjoUKZrUBKndAolgIWsGlTc+oPU9UBc/PEVcTRzSznk=",
+  "Source": "TNT.CartService.Api",
+  "BasePath": "_content/TNT.CartService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

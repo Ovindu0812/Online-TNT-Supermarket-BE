@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"SQavnLBv/JSP1Gcs5Ifu9kYR5LsKGPgVvau8fwEKTVQ=","Source":"TNT.InventoryService.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "ehT8It5TqVkChrIQYntFTIK+ap0Dp3tdwdDXV1ON3vM=",
+  "Source": "TNT.InventoryService.Api",
+  "BasePath": "_content/TNT.InventoryService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

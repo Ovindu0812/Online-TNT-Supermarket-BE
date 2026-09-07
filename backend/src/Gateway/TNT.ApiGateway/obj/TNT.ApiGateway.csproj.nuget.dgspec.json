@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Gateway\\TNT.ApiGateway\\TNT.ApiGateway.csproj": {}
+    "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/TNT.ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Gateway\\TNT.ApiGateway\\TNT.ApiGateway.csproj": {
+    "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/TNT.ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Gateway\\TNT.ApiGateway\\TNT.ApiGateway.csproj",
+        "projectUniqueName": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/TNT.ApiGateway.csproj",
         "projectName": "TNT.ApiGateway",
-        "projectPath": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Gateway\\TNT.ApiGateway\\TNT.ApiGateway.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive - Sri Lanka Institute of Information Technology\\Desktop\\New\\Online-TNT-Supermarket-BE\\backend\\src\\Gateway\\TNT.ApiGateway\\obj\\",
+        "projectPath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/TNT.ApiGateway.csproj",
+        "packagesPath": "/Users/ovindujayaweera/.nuget/packages/",
+        "outputPath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/ovindujayaweera/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "net8.0": {
-            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -33,17 +32,10 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.400"
+        }
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Serilog.AspNetCore": {
@@ -78,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.130/libexec/sdk/8.0.130/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
