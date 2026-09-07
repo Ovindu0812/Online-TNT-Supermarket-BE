@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"mloFYieB8ZlDTo4DiIS7RCi5LHgA8Y3o/O28VwmcC7M=","Source":"TNT.UserService.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "5ioSKD4Lgd/TmERFENOcUz2oU4DDAPSgVg1XHyR/254=",
+  "Source": "TNT.UserService.Api",
+  "BasePath": "_content/TNT.UserService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

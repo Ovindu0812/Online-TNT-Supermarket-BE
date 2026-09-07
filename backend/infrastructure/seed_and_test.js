@@ -2,7 +2,11 @@ const { Client } = require('pg');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 
-const connectionString = 'postgresql://postgres:tnt-supermarket46@db.idxklybxynliagmqvzag.supabase.co:5432/postgres';
+const connectionString = process.env.SUPABASE_DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error('SUPABASE_DATABASE_URL must be provided through the environment.');
+}
 
 function hashToken(rawToken) {
   return crypto.createHash('sha256').update(rawToken).digest('base64');
@@ -12,7 +16,7 @@ async function run() {
   console.log('================================================================');
   console.log(' TNT Supermarket - PostgreSQL Database Setup & Dummy Data Test  ');
   console.log(' Database: Supabase PostgreSQL                                  ');
-  console.log(' Host: db.idxklybxynliagmqvzag.supabase.co                     ');
+  console.log(' Connection: supplied through SUPABASE_DATABASE_URL            ');
   console.log('================================================================\n');
 
   const startTime = Date.now();

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>TNT.UserService.Api</RootNamespace>
+    <UserSecretsId>3d09e2a5-2cb7-4d4b-9ad2-7b2f2e4e2b02</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

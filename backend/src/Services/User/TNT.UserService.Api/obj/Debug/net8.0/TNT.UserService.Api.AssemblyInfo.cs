@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("3d09e2a5-2cb7-4d4b-9ad2-7b2f2e4e2b02")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23a4fb4d84b739ac7d5890fcc5e3da187dcf127e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e56b8f44129e8d542a111dd79bbbe40ca8e231b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.UserService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
