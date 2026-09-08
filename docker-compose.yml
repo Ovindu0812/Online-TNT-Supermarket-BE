@@ -31,7 +31,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:5000
       ConnectionStrings__IdentityDb: "Host=postgres;Port=5432;Database=tnt_supermarket;Username=postgres;Password=postgres;SSL Mode=Disable"
-      Jwt__SecretKey: "your-super-secret-key-at-least-32-characters-long-for-jwt-signing"
+      Jwt__SecretKey: "${JWT_SECRET_KEY:-change-me-at-least-32-chars-long-for-jwt}"
       Jwt__Issuer: "TNT.IdentityService"
       Jwt__Audience: "TNT.Supermarket"
       Cors__AllowedOrigin: "http://localhost:5173"
@@ -135,7 +135,7 @@ services:
     ports:
       - "5173:5173"
     environment:
-      VITE_API_BASE_URL: http://localhost:5000
+      VITE_API_BASE_URL: "${VITE_API_BASE_URL:-http://localhost:5000}"
     depends_on:
       - identity-service
     networks:

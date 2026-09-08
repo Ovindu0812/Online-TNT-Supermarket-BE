@@ -272,6 +272,7 @@ public class AuthControllerTests : IClassFixture<IdentityWebApplicationFactory>
 
     [Theory(DisplayName = "RoleEndpoint_WithRequiredStoredRole_ReturnsOk")]
     [InlineData("Admin", "/api/test/admin")]
+    [InlineData("Seller", "/api/test/seller")]
     [InlineData("Staff", "/api/test/staff")]
     [InlineData("Manager", "/api/test/staff")]
     [InlineData("Rider", "/api/test/rider")]

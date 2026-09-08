@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.CartService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79620b52ceda30485ef5a85e17399360257e90fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05c89ac3caabfb83508a2ed06b4cccd1d6ba30a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.CartService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.CartService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
