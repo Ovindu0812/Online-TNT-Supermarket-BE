@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.OrderService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4950040dcad49bc3088c8595687a5cf72babb643")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05c89ac3caabfb83508a2ed06b4cccd1d6ba30a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.OrderService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.OrderService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

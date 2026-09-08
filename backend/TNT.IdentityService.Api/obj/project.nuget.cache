@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yb7wKIy8umQ=",
+  "dgSpecHash": "R/IIDatkKzVrAQgKy3nrV9dzGyIAF3/pQxwsWz06hwlOzDx33DEedmGX3LKdcDE1fu6HDyI4rrIKH7C1cVLaDA==",
   "success": true,
   "projectFilePath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/TNT.IdentityService.Api/TNT.IdentityService.Api.csproj",
   "expectedPackageFiles": [
-    "/Users/ovindujayaweera/.nuget/packages/microsoft.aspnetcore.openapi/9.0.19/microsoft.aspnetcore.openapi.9.0.19.nupkg.sha512",
-    "/Users/ovindujayaweera/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512"
   ],
   "logs": []
 }

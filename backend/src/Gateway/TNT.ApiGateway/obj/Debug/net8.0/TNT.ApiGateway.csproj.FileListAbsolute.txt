@@ -1,36 +1,3 @@
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/appsettings.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.deps.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.runtimeconfig.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.pdb
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.AspNetCore.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.Console.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.File.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/System.IO.Hashing.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Yarp.ReverseProxy.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.csproj.AssemblyReference.cache
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.GeneratedMSBuildEditorConfig.editorconfig
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.AssemblyInfoInputs.cache
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.AssemblyInfo.cs
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.csproj.CoreCompileInputs.cache
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.MvcApplicationPartsAssemblyInfo.cache
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.sourcelink.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/scopedcss/bundle/TNT.ApiGateway.styles.css
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets.build.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets.development.json
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/refint/TNT.ApiGateway.dll
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.pdb
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.genruntimeconfig.cache
-/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/ref/TNT.ApiGateway.dll
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/appsettings.json
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.staticwebassets.endpoints.json
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.exe
@@ -73,9 +40,42 @@ C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/N
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.pdb
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.genruntimeconfig.cache
 C:/Users/user/OneDrive - Sri Lanka Institute of Information Technology/Desktop/New/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/ref/TNT.ApiGateway.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/appsettings.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.deps.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.runtimeconfig.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/TNT.ApiGateway.pdb
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.AspNetCore.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/System.IO.Hashing.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/bin/Debug/net8.0/Yarp.ReverseProxy.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.csproj.AssemblyReference.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.AssemblyInfoInputs.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.AssemblyInfo.cs
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.csproj.CoreCompileInputs.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.MvcApplicationPartsAssemblyInfo.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.sourcelink.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets.build.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets.development.json
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.TNT.ApiGateway.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.build.TNT.ApiGateway.props
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.TNT.ApiGateway.props
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.TNT.ApiGateway.props
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/scopedcss/bundle/TNT.ApiGateway.styles.css
 /Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.csproj.CopyComplete
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/refint/TNT.ApiGateway.dll
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.pdb
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/TNT.ApiGateway.genruntimeconfig.cache
+/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Gateway/TNT.ApiGateway/obj/Debug/net8.0/ref/TNT.ApiGateway.dll

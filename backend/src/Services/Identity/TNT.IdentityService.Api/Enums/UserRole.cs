@@ -12,5 +12,14 @@ public enum UserRole
     Seller = 1,
 
     /// <summary>A supermarket administrator with full system access.</summary>
-    Admin = 2
+    Admin = 2,
+
+    /// <summary>A supermarket employee responsible for stock and order fulfilment.</summary>
+    Staff = 3,
+
+    /// <summary>A delivery rider responsible for assigned deliveries.</summary>
+    Rider = 4,
+
+    /// <summary>A supermarket manager responsible for management operations.</summary>
+    Manager = 5
 }

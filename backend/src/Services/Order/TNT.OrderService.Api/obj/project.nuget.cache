@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v8dCa7c5k3uyJKZpJRgkmaut6Iy1BDTeICGfuY+NTdgi14OAIRff8w7TvLxjJw+1efHsE0yszYdc5wef5OT0wQ==",
+  "dgSpecHash": "ABavLkxjx7nRMy4WMBk6Y2Ult52213YF5AD2/qkft/97whd1jJxM02bK7aoCB/IvISwexDTw2EKM5MYrK/GUlQ==",
   "success": true,
   "projectFilePath": "/Users/ovindujayaweera/Documents/GitHub/Online-TNT-Supermarket-BE/backend/src/Services/Order/TNT.OrderService.Api/TNT.OrderService.Api.csproj",
   "expectedPackageFiles": [
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.11/microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
@@ -17,6 +18,12 @@
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.abstractions/7.1.2/microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.1.2/microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.logging/7.1.2/microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/serilog/4.0.0/serilog.4.0.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/serilog.aspnetcore/8.0.3/serilog.aspnetcore.8.0.3.nupkg.sha512",
@@ -31,7 +38,8 @@
     "/Users/ovindujayaweera/.nuget/packages/swashbuckle.aspnetcore.swagger/6.9.0/swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.9.0/swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512",
     "/Users/ovindujayaweera/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.9.0/swashbuckle.aspnetcore.swaggerui.6.9.0.nupkg.sha512",
-    "/Users/ovindujayaweera/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512"
+    "/Users/ovindujayaweera/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
+    "/Users/ovindujayaweera/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
   ],
   "logs": []
 }
