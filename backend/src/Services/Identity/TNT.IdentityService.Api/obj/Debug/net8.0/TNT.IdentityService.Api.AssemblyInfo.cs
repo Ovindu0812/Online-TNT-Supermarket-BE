@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05c89ac3caabfb83508a2ed06b4cccd1d6ba30a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd2c0ce79dac242baf7184cbbb3eb5f4ab96d594")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNT.IdentityService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
