@@ -271,10 +271,9 @@ public class AuthControllerTests : IClassFixture<IdentityWebApplicationFactory>
     }
 
     [Theory(DisplayName = "RoleEndpoint_WithRequiredStoredRole_ReturnsOk")]
+    [InlineData("Buyer", "/api/test/buyer")]
     [InlineData("Admin", "/api/test/admin")]
-    [InlineData("Seller", "/api/test/seller")]
     [InlineData("Staff", "/api/test/staff")]
-    [InlineData("Manager", "/api/test/staff")]
     [InlineData("Rider", "/api/test/rider")]
     public async Task RoleEndpoint_WithRequiredStoredRole_ReturnsOk(string role, string endpoint)
     {

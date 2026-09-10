@@ -25,18 +25,9 @@ public class TestAuthController : ControllerBase
     public IActionResult BuyerEndpoint() =>
         Ok(new { message = "Hello Buyer! You have the Buyer role.", role = "Buyer" });
 
-    /// <summary>Legacy test endpoint for the existing Seller role.</summary>
-    [HttpGet("seller")]
-    [Authorize(Roles = "Seller")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(StatusCodes.Status403Forbidden)]
-    public IActionResult SellerEndpoint() =>
-        Ok(new { message = "Hello Seller! You have the Seller role.", role = "Seller" });
-
-    /// <summary>Accessible to authenticated users with the Staff or Manager role.</summary>
+    /// <summary>Accessible only to authenticated users with the Staff role.</summary>
     [HttpGet("staff")]
-    [Authorize(Roles = "Staff,Manager")]
+    [Authorize(Roles = "Staff")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
