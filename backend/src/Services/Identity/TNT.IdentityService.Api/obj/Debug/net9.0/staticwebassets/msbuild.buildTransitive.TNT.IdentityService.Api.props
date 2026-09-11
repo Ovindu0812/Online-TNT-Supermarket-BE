@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/TNT.IdentityService.Api.props" />
-</Project>

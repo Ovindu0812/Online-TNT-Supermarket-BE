@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/TNT.PaymentService.Api.props" />
-</Project>

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/TNT.OrderService.Api.props" />
-</Project>

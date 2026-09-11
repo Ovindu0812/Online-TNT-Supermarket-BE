@@ -50,8 +50,8 @@ services:
     container_name: tnt-postgres-identity
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: IdentityDb
     ports:
       - "5432:5432"
@@ -60,7 +60,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d IdentityDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d IdentityDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -71,8 +71,8 @@ services:
     container_name: tnt-postgres-user
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: UserDb
     ports:
       - "5433:5432"
@@ -81,7 +81,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d UserDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d UserDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -92,8 +92,8 @@ services:
     container_name: tnt-postgres-product
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ProductDb
     ports:
       - "5434:5432"
@@ -102,7 +102,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d ProductDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ProductDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -113,8 +113,8 @@ services:
     container_name: tnt-postgres-order
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: OrderDb
     ports:
       - "5435:5432"
@@ -123,7 +123,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d OrderDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d OrderDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -134,8 +134,8 @@ services:
     container_name: tnt-postgres-cart
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: CartDb
     ports:
       - "5436:5432"
@@ -144,7 +144,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d CartDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d CartDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -155,8 +155,8 @@ services:
     container_name: tnt-postgres-payment
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: PaymentDb
     ports:
       - "5437:5432"
@@ -165,7 +165,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d PaymentDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d PaymentDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -176,8 +176,8 @@ services:
     container_name: tnt-postgres-inventory
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-tnt_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password_change_me}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: InventoryDb
     ports:
       - "5438:5432"
@@ -186,7 +186,7 @@ services:
     networks:
       - tnt-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tnt_user} -d InventoryDb"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d InventoryDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -239,10 +239,10 @@ services:
       - "5001:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__IdentityDb: "Host=postgres-identity;Port=5432;Database=IdentityDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__IdentityDb: "Host=postgres-identity;Port=5432;Database=IdentityDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Jwt__AccessTokenMinutes: 15
       Jwt__RefreshTokenDays: 7
       Kafka__Enabled: "true"
@@ -269,10 +269,10 @@ services:
       - "5002:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__UserDb: "Host=postgres-user;Port=5432;Database=UserDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__UserDb: "Host=postgres-user;Port=5432;Database=UserDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
     depends_on:
       postgres-user:
@@ -291,10 +291,10 @@ services:
       - "5003:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__ProductDb: "Host=postgres-product;Port=5432;Database=ProductDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__ProductDb: "Host=postgres-product;Port=5432;Database=ProductDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
       Kafka__Enabled: "true"
       Kafka__BootstrapServers: kafka:9092
@@ -318,10 +318,10 @@ services:
       - "5004:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__OrderDb: "Host=postgres-order;Port=5432;Database=OrderDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__OrderDb: "Host=postgres-order;Port=5432;Database=OrderDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
       Kafka__Enabled: "true"
       Kafka__BootstrapServers: kafka:9092
@@ -345,10 +345,10 @@ services:
       - "5005:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__CartDb: "Host=postgres-cart;Port=5432;Database=CartDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__CartDb: "Host=postgres-cart;Port=5432;Database=CartDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
     depends_on:
       postgres-cart:
@@ -367,10 +367,10 @@ services:
       - "5006:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__PaymentDb: "Host=postgres-payment;Port=5432;Database=PaymentDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__PaymentDb: "Host=postgres-payment;Port=5432;Database=PaymentDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
       Kafka__Enabled: "true"
       Kafka__BootstrapServers: kafka:9092
@@ -394,10 +394,10 @@ services:
       - "5007:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__InventoryDb: "Host=postgres-inventory;Port=5432;Database=InventoryDb;Username=${POSTGRES_USER:-tnt_user};Password=${POSTGRES_PASSWORD:-dev_password_change_me}"
+      ConnectionStrings__InventoryDb: "Host=postgres-inventory;Port=5432;Database=InventoryDb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Cors__AllowedOrigin: ${CORS_ALLOWED_ORIGIN:-http://localhost:5173}
       Kafka__Enabled: "true"
       Kafka__BootstrapServers: kafka:9092
@@ -423,7 +423,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       Jwt__Issuer: TNT.IdentityService
       Jwt__Audience: TNT.Supermarket
-      Jwt__SecretKey: ${JWT_SECRET_KEY:-dev-only-secret-key-at-least-32-chars-long!}
+      Jwt__SecretKey: ${JWT_SECRET_KEY}
       Kafka__Enabled: "true"
       Kafka__BootstrapServers: kafka:9092
       Kafka__UserEventsTopic: user-events

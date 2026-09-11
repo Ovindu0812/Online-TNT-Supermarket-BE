@@ -96,7 +96,7 @@ public class AuthService : IAuthService
             .FirstOrDefaultAsync(u => u.NormalizedEmail == normalizedEmail && u.IsActive, ct);
 
         // Use a generic message — do not disclose whether email or password was wrong
-        if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+        if (user == null || !IsValidPassword(request.Password, user.PasswordHash))
         {
             _logger.LogWarning("Failed login attempt for email: {Email}", normalizedEmail);
             throw new UnauthorizedException("Invalid credentials.");
@@ -236,6 +236,27 @@ public class AuthService : IAuthService
     private static string NormalizeEmail(string email) =>
         email.Trim().ToUpperInvariant();
 
+    private bool IsValidPassword(string password, string? passwordHash)
+    {
+        if (string.IsNullOrWhiteSpace(passwordHash))
+        {
+            _logger.LogWarning("Login rejected because the stored password hash is empty.");
+            return false;
+        }
+
+        try
+        {
+            return BCrypt.Net.BCrypt.Verify(password, passwordHash);
+        }
+        catch (Exception ex) when (ex is BCrypt.Net.SaltParseException
+                                   || ex is FormatException
+                                   || ex is ArgumentException)
+        {
+            _logger.LogWarning(ex, "Login rejected because the stored password hash is malformed.");
+            return false;
+        }
+    }
+
     private static UserSummaryResponse MapToSummary(ApplicationUser user) =>
         new()
         {
@@ -245,4 +266,3 @@ public class AuthService : IAuthService
             Role = user.Role
         };
 }
-

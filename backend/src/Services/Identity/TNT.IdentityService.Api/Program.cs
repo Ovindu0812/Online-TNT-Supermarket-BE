@@ -39,8 +39,20 @@ try
     // ──────────────────────────────────────────────────────────────────────────
     // Configuration binding
     // ──────────────────────────────────────────────────────────────────────────
-    builder.Services.Configure<JwtSettings>(
-        builder.Configuration.GetSection(JwtSettings.SectionName));
+    builder.Services.AddOptions<JwtSettings>()
+        .Bind(builder.Configuration.GetSection(JwtSettings.SectionName))
+        .Validate(settings => !string.IsNullOrWhiteSpace(settings.Issuer),
+            "Jwt:Issuer is required.")
+        .Validate(settings => !string.IsNullOrWhiteSpace(settings.Audience),
+            "Jwt:Audience is required.")
+        .Validate(settings => !string.IsNullOrWhiteSpace(settings.SecretKey)
+                              && settings.SecretKey.Length >= 32,
+            "Jwt:SecretKey must be at least 32 characters long.")
+        .Validate(settings => settings.AccessTokenMinutes > 0,
+            "Jwt:AccessTokenMinutes must be greater than zero.")
+        .Validate(settings => settings.RefreshTokenDays > 0,
+            "Jwt:RefreshTokenDays must be greater than zero.")
+        .ValidateOnStart();
     builder.Services.Configure<KafkaSettings>(
         builder.Configuration.GetSection(KafkaSettings.SectionName));
 
@@ -59,7 +71,7 @@ try
     builder.Services.AddOptions<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme)
         .Configure<Microsoft.Extensions.Options.IOptions<JwtSettings>>((opts, jwtOptions) =>
         {
-            opts.IncludeErrorDetails = true;
+            opts.IncludeErrorDetails = builder.Environment.IsDevelopment();
             var settings = jwtOptions.Value;
             opts.TokenValidationParameters = new TokenValidationParameters
             {

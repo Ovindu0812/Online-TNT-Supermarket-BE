@@ -1,2 +1,12 @@
-backend/infrastructure/.env
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+.vs/
+.idea/
+.DS_Store
 
+.env
+.env.*
+!.env.example

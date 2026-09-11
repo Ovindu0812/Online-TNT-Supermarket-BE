@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main, develop]
 
+permissions:
+  contents: read
+
 # Cancel in-progress runs when a new commit is pushed
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -37,14 +40,15 @@ jobs:
       - name: Build solution (no-restore)
         run: dotnet build TNT.Supermarket.sln --no-restore --configuration Release
 
-      - name: Run Identity Service integration tests
+      - name: Run backend tests
         run: >
           dotnet test
-          tests/TNT.IdentityService.Tests/TNT.IdentityService.Tests.csproj
+          TNT.Supermarket.sln
           --no-build
+          --no-restore
           --configuration Release
           --verbosity normal
-          --logger "trx;LogFileName=identity-test-results.trx"
+          --logger "trx;LogFileName=backend-test-results.trx"
           --collect:"XPlat Code Coverage"
         env:
           # Ensure tests never accidentally hit a real database
@@ -59,53 +63,7 @@ jobs:
           retention-days: 7
 
   # ─────────────────────────────────────────────────────────────────────────────
-  # Job 2: Build the React frontend
-  # ─────────────────────────────────────────────────────────────────────────────
-  frontend:
-    name: Frontend — Build (React / Vite)
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .  # FE is in a separate repository; see note below
-
-    steps:
-      - name: Checkout frontend repository
-        uses: actions/checkout@v4
-        with:
-          # When running from the BE repo with FE as a submodule or sibling,
-          # adjust the repository reference here or use a separate workflow
-          # in the FE repo.  This step works when the BE and FE repos are
-          # combined into a monorepo or when this job is triggered from the FE.
-          repository: ${{ github.repository_owner }}/Online-TNT-Supermarket-FE
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: frontend
-
-      - name: Set up Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-          cache-dependency-path: frontend/package-lock.json
-
-      - name: Install npm dependencies
-        working-directory: frontend
-        run: npm ci
-
-      - name: Build Vite production bundle
-        working-directory: frontend
-        run: npm run build
-        env:
-          VITE_API_BASE_URL: http://localhost:5000
-
-      - name: Upload frontend build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: frontend-dist
-          path: frontend/dist/
-          retention-days: 7
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # Job 3: Build the Identity Service Docker image
+  # Job 2: Build the Identity Service Docker image
   # ─────────────────────────────────────────────────────────────────────────────
   docker-identity:
     name: Docker — Identity Service Image
@@ -122,7 +80,7 @@ jobs:
       - name: Build Identity Service Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./backend
+          context: .
           file: ./backend/infrastructure/Dockerfiles/Dockerfile.Identity
           push: false       # Set to true and add docker/login-action when deploying
           tags: tnt-identity-service:${{ github.sha }}
